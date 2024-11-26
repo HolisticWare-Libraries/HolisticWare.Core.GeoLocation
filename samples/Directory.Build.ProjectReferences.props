@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.GeoLocation\HolisticWare.Core.GeoLocation.csproj" />
+  </ItemGroup>
+
+</Project>

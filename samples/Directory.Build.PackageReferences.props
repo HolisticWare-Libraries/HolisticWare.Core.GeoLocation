@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HolisticWare.Core.GeoLocation" />
+  </ItemGroup>
+
+</Project>

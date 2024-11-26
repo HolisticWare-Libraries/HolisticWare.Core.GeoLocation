@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageVersion Include="HolisticWare.Core.GeoLocation" Version="0.0.1" />
+  </ItemGroup>
+</Project>
