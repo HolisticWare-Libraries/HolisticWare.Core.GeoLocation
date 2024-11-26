@@ -1,0 +1,4 @@
+<Project>
+    <Import Project="./Directory.Packages.split.business-domain-logic.props" />
+    <Import Project="./Directory.Packages.split.user-interface.props" />
+</Project>

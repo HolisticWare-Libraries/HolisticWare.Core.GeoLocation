@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup>
+        <!-- 
+        https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management
+        -->
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+</Project>

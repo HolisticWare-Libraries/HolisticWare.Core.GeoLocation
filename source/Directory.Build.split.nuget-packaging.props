@@ -1,0 +1,42 @@
+<Project>
+    <PropertyGroup>
+        <PackOnBuild>true</PackOnBuild>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IsPackable>true</IsPackable>
+    
+        <Owners>moljac, HolisticWare</Owners>
+        <Authors>moljac, HolisticWare</Authors>
+        <Copyright>2020</Copyright>
+        <ProjectUrl>
+            https://github.com/HolisticWare-Libraries/HolisticWare.Core.GeoLocation/
+        </ProjectUrl>
+        <PackageProjectUrl>
+            https://github.com/HolisticWare-Libraries/HolisticWare.Core.GeoLocation/
+        </PackageProjectUrl>
+        <RepositoryUrl>
+            https://github.com/HolisticWare-Libraries/HolisticWare.Core.GeoLocation/
+        </RepositoryUrl>
+        <iconUrl>
+            https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
+        </iconUrl>
+        <PackageIconUrl>
+            https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
+        </PackageIconUrl>
+        <license>MIT</license>
+        <PackageLicenseUrl>
+            https://github.com/HolisticWare-Libraries/HolisticWare.Core.GeoLocation/blob/main/LICENSE
+        </PackageLicenseUrl>
+        <VersionPrefix>0.0.1</VersionPrefix>
+        <!--
+        VersionSuffix - For debugging and local nuget feed
+        <VersionSuffix>alpha-$([System.DateTime]::Now.ToString('yyyyMMddHHmm'))</VersionSuffix>
+        -->
+        <PackageVersion>$(Version)</PackageVersion>
+    
+        <!--
+        put the package output into a nuget test folder
+        -->
+        <PackageOutputPath>../../output</PackageOutputPath>
+      </PropertyGroup>
+    
+</Project>

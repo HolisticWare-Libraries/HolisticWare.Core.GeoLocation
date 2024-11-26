@@ -1,0 +1,29 @@
+<Project>
+    <!--
+      https://github.com/dotnet/roslyn-analyzers
+      Microsoft.CodeAnalysis.NetAnalyzers
+    -->
+    <PropertyGroup>
+        <!--
+          EnableNETAnalyzers
+          -->
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <!--
+          AnalysisLevel
+          -->
+        <AnalysisLevel>latest</AnalysisLevel>
+      </PropertyGroup>
+
+
+      <!-- 
+      NuGet
+      https://learn.microsoft.com/en-us/nuget/concepts/security-best-practices
+      https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages  
+      -->
+      <PropertyGroup>
+        <NuGetAudit>true</NuGetAudit>
+        <NuGetAuditLevel>low</NuGetAuditLevel>
+        <NuGetAuditMode>all</NuGetAuditMode>
+    </PropertyGroup>
+
+</Project>
