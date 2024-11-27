@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library-source", "library-source", "{56123580-99E9-45AC-8300-ABF8EE1D021E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{3799F198-4FDB-4BFF-811E-D12EEB39D00C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36B9D25A-40E6-47C2-AD91-6EF9EF420571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.GeoLocation", "..\..\..\source\HolisticWare.Core.GeoLocation\HolisticWare.Core.GeoLocation.csproj", "{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConsole.Benchmarks.CSharp", "AppConsole.Benchmarks.CSharp\AppConsole.Benchmarks.CSharp.csproj", "{293CDDF5-F90F-40AD-9CF9-30DCA84D9E03}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\externals\Core.Math.Samples\tests\data\HolisticWare.Core.Math.Samples\HolisticWare.Core.Math.Samples.projitems*{04f3d823-abea-46dd-9ec2-56c08ca074db}*SharedItemsImports = 4
+		..\Tests.CommonShared\Tests.CommonShared.projitems*{13ab4ad2-d077-48e0-b6f2-791bc25eb413}*SharedItemsImports = 13
+		..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Sequential\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.projitems*{97322730-7912-4331-8881-df029ef7cdd1}*SharedItemsImports = 13
+		..\..\externals\Core.Math.Samples\tests\data\HolisticWare.Core.Math.Samples\HolisticWare.Core.Math.Samples.projitems*{98411f49-ca5e-41c7-81e2-26c9adff255d}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293CDDF5-F90F-40AD-9CF9-30DCA84D9E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293CDDF5-F90F-40AD-9CF9-30DCA84D9E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293CDDF5-F90F-40AD-9CF9-30DCA84D9E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293CDDF5-F90F-40AD-9CF9-30DCA84D9E03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36B9D25A-40E6-47C2-AD91-6EF9EF420571} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
+		{3C9C5394-C4A3-4DF9-9692-00FF04FD5E3D} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {440F697D-77CA-4EA5-9C13-585B4998A64A}
+	EndGlobalSection
+EndGlobal

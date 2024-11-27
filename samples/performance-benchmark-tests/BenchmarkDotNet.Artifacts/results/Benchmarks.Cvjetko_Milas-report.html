@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarks.Cvjetko_Milas-20240218-091447</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=macOS 14.3.1 (23D60) [Darwin 23.3.0]
+Apple M2 Max, 1 CPU, 12 logical and 12 physical cores
+.NET SDK=8.0.101
+  [Host]     : .NET 8.0.2 (8.0.224.6711), Arm64 RyuJIT AdvSIMD
+  DefaultJob : .NET 8.0.2 (8.0.224.6711), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                                                                                             Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>EuclidianPlanarFlatEarth_Distance_PythagoreanFormulaParallelMeridians_CalculateWithRadiusAtLatitude</td><td>14.764 ns</td><td>0.1423 ns</td><td>0.1331 ns</td>
+</tr><tr><td>EuclidianPlanarFlatEarth_Distance_PythagoreanFormulaParallelMeridians_CalculateSphericalProjectionToPlane</td><td>5.571 ns</td><td>0.0462 ns</td><td>0.0433 ns</td>
+</tr><tr><td>EuclidianPlanarFlatEarth_Distance_PythagoreanFormulaConverginglMeridians_Calculate</td><td>5.820 ns</td><td>0.1128 ns</td><td>0.1055 ns</td>
+</tr><tr><td>EuclidianPlanarFlatEarth_Distance_FederalCommunicationsCommission_Calculate</td><td>21.585 ns</td><td>0.2764 ns</td><td>0.2586 ns</td>
+</tr><tr><td>Spherical_Distance_Haversine_CalculateCopilot</td><td>24.456 ns</td><td>0.3000 ns</td><td>0.2807 ns</td>
+</tr><tr><td>Spherical_Distance_Haversine_CalculateMAUI</td><td>20.547 ns</td><td>0.1495 ns</td><td>0.1398 ns</td>
+</tr><tr><td>Spherical_Distance_Haversine_CalculateMAUIOptimized</td><td>20.489 ns</td><td>0.1381 ns</td><td>0.1154 ns</td>
+</tr><tr><td>Spherical_Distance_Haversine_Calculate3</td><td>54.428 ns</td><td>0.3620 ns</td><td>0.3386 ns</td>
+</tr><tr><td>Spherical_Distance_Haversine_Calculate4</td><td>21.208 ns</td><td>0.1280 ns</td><td>0.1135 ns</td>
+</tr><tr><td>Spherical_Distance_GreatCircle_Calculate</td><td>5.716 ns</td><td>0.0502 ns</td><td>0.0470 ns</td>
+</tr><tr><td>Spherical_Distance_LawOfCosines_Calculate</td><td>27.397 ns</td><td>0.1705 ns</td><td>0.1594 ns</td>
+</tr><tr><td>Spherical_Distance_EquirectangularPytagoras_Calculate</td><td>5.638 ns</td><td>0.0445 ns</td><td>0.0416 ns</td>
+</tr><tr><td>Ellipsoidal_Distance_Vincenty_CalculateHeriHermawan</td><td>24.077 ns</td><td>0.1574 ns</td><td>0.1473 ns</td>
+</tr><tr><td>Ellipsoidal_Distance_Vincenty_CalculateIterativeNathanRooyArticle</td><td>179.918 ns</td><td>2.5142 ns</td><td>2.3518 ns</td>
+</tr><tr><td>EarthRadius_R</td><td>9.048 ns</td><td>0.0753 ns</td><td>0.0704 ns</td>
+</tr></tbody></table>
+</body>
+</html>
