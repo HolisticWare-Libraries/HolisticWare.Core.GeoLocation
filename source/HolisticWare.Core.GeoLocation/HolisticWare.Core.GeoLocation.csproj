@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8;netstandard1.0;netstandard1.1;netstandard1.3</TargetFrameworks>
+        <RootNamespace>Core.GeoLocation</RootNamespace>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Planar\" />
+        <Folder Include="Spatial\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    </ItemGroup>
+</Project>
