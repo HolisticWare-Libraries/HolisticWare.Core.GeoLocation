@@ -19,13 +19,7 @@
         <iconUrl>
             https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
         </iconUrl>
-        <PackageIconUrl>
-            https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
-        </PackageIconUrl>
         <license>MIT</license>
-        <PackageLicenseUrl>
-            https://github.com/HolisticWare-Libraries/HolisticWare.Core.GeoLocation/blob/main/LICENSE
-        </PackageLicenseUrl>
         <VersionPrefix>0.0.1</VersionPrefix>
         <!--
         VersionSuffix - For debugging and local nuget feed
@@ -38,5 +32,10 @@
         -->
         <PackageOutputPath>../../output</PackageOutputPath>
       </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md"   Pack="true" PackagePath="/" />
+        <None Include="LICENSE"     Pack="true" PackagePath="/" />
+    </ItemGroup>
     
 </Project>

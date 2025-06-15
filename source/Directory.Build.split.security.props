@@ -1,0 +1,12 @@
+<Project>
+    <!--
+        Security
+    -->
+    <PropertyGroup>
+        <NuGetAuditMode>all</NuGetAuditMode>
+        <NuGetAuditLevel>moderate</NuGetAuditLevel>
+        <GenerateSBOM>true</GenerateSBOM>
+    </PropertyGroup>
+
+
+</Project>

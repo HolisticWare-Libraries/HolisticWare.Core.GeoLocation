@@ -3,7 +3,10 @@
         <BuildReferencingNugets>false</BuildReferencingNugets>
     </PropertyGroup>
 
+
     <Import Project="./Directory.Build.split.project.props" />
+    <Import Project="./Directory.Build.split.security.props" />
     <Import Project="./Directory.Build.split.nuget.props" />
     <Import Project="./Directory.Build.split.nuget-packaging.props" />
+
 </Project>

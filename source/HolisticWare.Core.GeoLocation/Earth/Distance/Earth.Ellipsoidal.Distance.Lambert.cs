@@ -28,7 +28,7 @@ public partial class
                                         Lambert
             {
                 /// <summary>
-                /// 
+                /// Calculate Lambert distance (
                 /// </summary>
                 /// <param name="lat1"></param>
                 /// <param name="lon1"></param>
@@ -48,7 +48,12 @@ public partial class
                                         )
                 {
                     double d = 0;
+                    
+                    double dx = (lon1 - lon2);
+                    double dy = (lat2 - lat1);
 
+                    d = Math.Sqrt(dx * dx + dy * dy);
+                    
                     return d;
                 }
             }
