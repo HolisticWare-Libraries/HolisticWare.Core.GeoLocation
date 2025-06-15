@@ -16,6 +16,8 @@ indent_style = space
 charset = utf-8
 indent_size=4
 trim_trailing_whitespace = true
+max_line_length = 120
+rulers = 40 80 100 120
 
 # https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019
 [*.cs]
