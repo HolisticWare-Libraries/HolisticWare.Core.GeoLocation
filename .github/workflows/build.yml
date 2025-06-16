@@ -4,58 +4,21 @@ name: build-source                                                      # workfl
 on: [push]                                                              # trigger
 
 jobs:
-  build-macOS-latest-msbuild:
+
+  build-macOS-latest:
     runs-on: macOS-latest    
     steps:
     - uses: actions/checkout@v1
-    - name: Display the path pwsh
-      run: echo ${env:PATH}
-      shell: pwsh
-    - name: Display the path bash
-      run: echo $PATH
+    - name: build-macOS-latest-bash
       shell: bash
-    - name: build-macOS-latest-msbuild-oneliner
-      run: echo build-macOS-latest-msbuild
-    - name: build-macOS-latest-msbuild
       run: |
-        msbuild /restore ./source/*.sln
+        dotnet build ./source/**/*.sln
+        for p in $(find . -iname "*.csproj"); do dotnet build $p; done
+        # https://github.com/dotnet/msbuild/issues/9714
+        # dotnet build $(./source/**/*.csproj)
+        dotnet cake
 
-  test-build-macOS-latest-msbuild:
-    runs-on: macOS-latest    
-    needs: build-macOS-latest-msbuild    
-    steps:
-    - uses: actions/checkout@v1
-    - name: Display the path pwsh
-      run: echo ${env:PATH}
-      shell: pwsh
-    - name: Display the path bash
-      run: echo $PATH
-      shell: bash
-    - name: test-build-macOS-latest-msbuild-oneliner
-      run: echo test-build-macOS-latest-msbuild
-    - name: test-build-macOS-latest-msbuild
-      run: |
-        msbuild /restore ./tests/unit-tests/project-references/*.sln
-
-  build-macOS-latest-dotnet:
-    runs-on: macOS-latest    
-    steps:
-    - uses: actions/checkout@v1
-    - name: Display the path pwsh
-      run: echo ${env:PATH}
-      shell: pwsh
-    - name: Display the path bash
-      run: echo $PATH
-      shell: bash
-    - name: build-macOS-latest-dotnet-oneliner
-      run: echo build-macOS-latest-dotnet-oneliner
-    - name: build-macOS-latest-dotnet
-      run: |
-        dotnet restore ./source/*.sln
-        dotnet build ./source/*.sln
-
-
-  build-windows-latest-msbuild:  
+  build-windows-latest:  
     runs-on: windows-latest    
     steps:
     - uses: actions/checkout@v1
