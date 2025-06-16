@@ -1,7 +1,30 @@
-namespace Benchmarks;
+namespace Benchmarks.Earth.Distance.Calculate;
 
+[BenchmarkDotNet.Attributes.MemoryDiagnoser]
+/*
+[ThreadingDiagnoser]
+[ExceptionDiagnoser]
+[BenchmarkDotNet.Attributes.AsciiDocExporter]
+[BenchmarkDotNet.Attributes.CsvExporter]
+[BenchmarkDotNet.Attributes.CsvMeasurementsExporter]
+[BenchmarkDotNet.Attributes.HtmlExporter]
+[BenchmarkDotNet.Attributes.PlainExporter]
+[BenchmarkDotNet.Attributes.RPlotExporter]
+[BenchmarkDotNet.Attributes.JsonExporterAttribute.Brief]
+[BenchmarkDotNet.Attributes.JsonExporterAttribute.BriefCompressed]
+[BenchmarkDotNet.Attributes.JsonExporterAttribute.Full]
+[BenchmarkDotNet.Attributes.JsonExporterAttribute.FullCompressed]
+[BenchmarkDotNet.Attributes.MarkdownExporterAttribute.Default]
+[BenchmarkDotNet.Attributes.MarkdownExporterAttribute.GitHub]
+[BenchmarkDotNet.Attributes.MarkdownExporterAttribute.StackOverflow]
+[BenchmarkDotNet.Attributes.MarkdownExporterAttribute.Atlassian]
+[BenchmarkDotNet.Attributes.XmlExporterAttribute.Brief]
+[BenchmarkDotNet.Attributes.XmlExporterAttribute.BriefCompressed]
+[BenchmarkDotNet.Attributes.XmlExporterAttribute.Full]
+[BenchmarkDotNet.Attributes.XmlExporterAttribute.FullCompressed]
+*/
 public partial class
-                                            Cvjetko_Milas
+                                        Cvjetko_Milas
 {
     static string description = "// moljac's/mel's (zagreb) Mom's to neighbors 60 m";
     static string description_colors = "// green dots";
@@ -17,12 +40,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .EuclidianPlanarFlatEarth.Distance.PythagoreanFormulaParallelMeridians
                                         .CalculateWithRadiusAtLatitude
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -36,12 +59,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .EuclidianPlanarFlatEarth.Distance.PythagoreanFormulaParallelMeridians
                                         .CalculateSphericalProjectionToPlane
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -55,12 +78,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .EuclidianPlanarFlatEarth.Distance.PythagoreanFormulaConverginglMeridians
                                         .Calculate
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -74,12 +97,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .EuclidianPlanarFlatEarth.Distance.FederalCommunicationsCommission
                                         .Calculate
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -93,11 +116,11 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.Haversine.CalculateCopilot
                                                             (
-                                                                lat1, 
+                                                                lat1,
                                                                 lon1,
                                                                 lat2,
                                                                 lon2
@@ -111,17 +134,17 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.Haversine.CalculateMAUI
                                                             (
-                                                                lat1, 
+                                                                lat1,
                                                                 lon1,
                                                                 lat2,
                                                                 lon2
                                                             );
     }
-    
+
 
     [BenchmarkDotNet.Attributes.Benchmark]
     public
@@ -130,17 +153,17 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.Haversine.CalculateMAUIOptimized
                                                             (
-                                                                lat1, 
+                                                                lat1,
                                                                 lon1,
                                                                 lat2,
                                                                 lon2
                                                             );
     }
-    
+
     [BenchmarkDotNet.Attributes.Benchmark]
     public
         double
@@ -148,11 +171,11 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.Haversine.Calculate3
                                                             (
-                                                                lat1, 
+                                                                lat1,
                                                                 lon1,
                                                                 lat2,
                                                                 lon2
@@ -166,12 +189,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.Haversine
                                         .Calculate4
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -185,12 +208,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.GreatCircle
                                         .Calculate
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -204,12 +227,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.LawOfCosines
                                         .Calculate
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -223,12 +246,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Spherical.Distance.EquirectangularPytagoras
                                         .Calculate
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -242,12 +265,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Ellipsoidal.Distance.Vincenty
                                         .CalculateHeriHermawan
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -261,12 +284,12 @@ public partial class
                                         (
                                         )
     {
-        return         
+        return
             Core.GeoLocation.Earth
                 .Ellipsoidal.Distance.Vincenty
                                         .CalculateIterativeNathanRooyArticle
                                                 (
-                                                    lat1, 
+                                                    lat1,
                                                     lon1,
                                                     lat2,
                                                     lon2
@@ -276,7 +299,7 @@ public partial class
     public static
         void
                                         Dump
-                                        (                                            
+                                        (
                                         )
     {
         double distance;
@@ -295,7 +318,7 @@ public partial class
                                             .PythagoreanFormulaParallelMeridians
                                                 .CalculateWithRadiusAtLatitude
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -310,7 +333,7 @@ public partial class
                                             .PythagoreanFormulaParallelMeridians
                                                 .CalculateSphericalProjectionToPlane
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -325,7 +348,7 @@ public partial class
                                             .PythagoreanFormulaConverginglMeridians
                                                 .Calculate
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -340,7 +363,7 @@ public partial class
                                             .FederalCommunicationsCommission
                                                 .Calculate
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -355,7 +378,7 @@ public partial class
                                             .Haversine
                                                 .CalculateMAUI
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -370,7 +393,7 @@ public partial class
                                             .Haversine
                                                 .CalculateMAUIOptimized
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -385,7 +408,7 @@ public partial class
                                             .Haversine
                                                 .CalculateMAUINonOptimized
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -400,7 +423,7 @@ public partial class
                                             .Haversine
                                                 .CalculateCopilot
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -415,7 +438,7 @@ public partial class
                                             .Haversine
                                                 .Calculate3
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -430,7 +453,7 @@ public partial class
                                             .Haversine
                                                 .Calculate4
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -445,7 +468,7 @@ public partial class
                                             .GreatCircle
                                                 .Calculate
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -460,7 +483,7 @@ public partial class
                                             .LawOfCosines
                                                 .Calculate
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -475,7 +498,7 @@ public partial class
                                             .EquirectangularPytagoras
                                                 .Calculate
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -490,7 +513,7 @@ public partial class
                                             .Vincenty
                                                 .CalculateHeriHermawan
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -505,7 +528,7 @@ public partial class
                                             .Vincenty
                                                 .CalculateIterativeNathanRooyArticle
                                                                         (
-                                                                            lat1, 
+                                                                            lat1,
                                                                             lon1,
                                                                             lat2,
                                                                             lon2
@@ -516,5 +539,5 @@ public partial class
         Console.WriteLine($"             distance = {distance}");
 
         return;
-    }          
+    }
 }
