@@ -3,7 +3,7 @@
 dotnet run \
     --project ./AppConsole.Benchmarks.CSharp/AppConsole.Benchmarks.CSharp.csproj \
         -c Release \
-        -f net8.0
+        -f net9.0
 
 */
 Benchmarks.Cvjetko_Milas.Dump();
@@ -30,7 +30,7 @@ System.IO.File.Move
                     summary.LogFilePath,
                     System.IO.Path.Combine
                                         (
-                                            "..", "..", "..", 
+                                            "..", "..", "..",
                                             "Basics01.ControlStructures.ControlStructures.log"
                                         ),
                     true
