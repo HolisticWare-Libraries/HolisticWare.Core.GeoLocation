@@ -44,6 +44,8 @@ These algorithms were proposed in MAUI PR, but closed in order not to clutter MA
 
 *   https://github.com/dotnet/maui/pull/20663
 
+*   https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/geolocation
+
 ## Tests 
 
 ### Accuracy
@@ -871,3 +873,10 @@ Apple M2 Max, 1 CPU, 12 logical and 12 physical cores
 |                                                     Spherical_Distance_EquirectangularPytagoras_Calculate |   5.914 ns | 0.0090 ns | 0.0080 ns |
 |                                                       Ellipsoidal_Distance_Vincenty_CalculateHeriHermawan |  26.581 ns | 0.2357 ns | 0.2089 ns |
 |                                         Ellipsoidal_Distance_Vincenty_CalculateIterativeNathanRooyArticle | 145.541 ns | 0.6795 ns | 0.6356 ns |
+
+
+## Diverse
+
+*   https://learn.microsoft.com/en-us/answers/questions/1394844/how-can-i-get-the-distance-in-miles-between-twonet
+
+*   https://github.com/NetTopologySuite/NetTopologySuite
