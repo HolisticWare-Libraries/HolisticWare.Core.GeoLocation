@@ -38,8 +38,8 @@ public partial class
                     double delta_lon = ( lon1 - lon2 );
 
                     // Chebishev
-                    double K1 = 111.13209 - 0.56605 * Math.Cos( 2 * lat) + 0.00120 * Math.Cos( 4 * lat);
-                    double K2 = 111.41513 * Math.Cos( lat ) - 0.09455 * Math.Cos( 3 * lat ) + 0.00012 * Math.Cos( 5 * lat );
+                    double K1 = 111.13209 - 0.56605 * Math.Cos( 2.0 * lat) + 0.00120 * Math.Cos( 4.0 * lat);
+                    double K2 = 111.41513 * Math.Cos( lat ) - 0.09455 * Math.Cos( 3.0 * lat ) + 0.00012 * Math.Cos( 5.0 * lat );
                     double d = 
                                 Math.Sqrt
                                     (
@@ -52,7 +52,7 @@ public partial class
                                         K2 * delta_lon * K2 * delta_lon
                                     );
 
-                    return d * 1000;
+                    return d * 1000.0;
                 }
             }
         }
