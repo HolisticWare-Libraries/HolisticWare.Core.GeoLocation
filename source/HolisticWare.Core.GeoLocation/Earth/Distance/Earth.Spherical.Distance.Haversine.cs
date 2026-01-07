@@ -83,13 +83,13 @@ public partial class
 
                     var lat1_r = Radian.FromDegrees(lat1);
                     var lat2_r = Radian.FromDegrees(lat2);
-                    var dlat2_half = dLat / 2;
-                    var dlon2_half = dLon / 2;
+                    var dlat2_half = dLat / 2.0;
+                    var dlon2_half = dLon / 2.0;
                     var dLat2 = Math.Sin(dlat2_half) * Math.Sin(dlat2_half);
                     var dLon2 = Math.Sin(dlon2_half) * Math.Sin(dlon2_half);
 
                     var a = dLat2 + dLon2 * Math.Cos(lat1_r) * Math.Cos(lat2_r);
-                    var c = 2 * Math.Asin(Math.Sqrt(a));
+                    var c = 2.0 * Math.Asin(Math.Sqrt(a));
 
                     return 
                         //  meanEarth.RadiusInKilometers * c * 1000
@@ -115,8 +115,8 @@ public partial class
 
                     var lat1_r = Radian.FromDegrees(lat1);
                     var lat2_r = Radian.FromDegrees(lat2);
-                    var dlat2_half = dLat / 2;
-                    var dlon2_half = dLon / 2;
+                    var dlat2_half = dLat / 2.0;
+                    var dlon2_half = dLon / 2.0;
                     var dLat2 = Math.Sin(dlat2_half) * Math.Sin(dlat2_half);
                     var dLon2 = Math.Sin(dlon2_half) * Math.Sin(dlon2_half);
 
@@ -188,18 +188,18 @@ public partial class
                 double dLon             = Radian.FromDegrees(lon2 - lon1);
 
                 double a = 
-                        Math.Sin(dLat / 2) * Math.Sin(dLat / 2) 
+                        Math.Sin(dLat / 2.0) * Math.Sin(dLat / 2.0) 
                         +
                         // Math.Cos(lat1.ToRadians()) * Math.Cos(lat2.ToRadians()) *
                         Math.Cos(Radian.FromDegrees(lat1)) 
                         * 
                         Math.Cos(Radian.FromDegrees(lat2)) 
                         *
-                        Math.Sin(dLon / 2) 
+                        Math.Sin(dLon / 2.0) 
                         * 
-                        Math.Sin(dLon / 2)
+                        Math.Sin(dLon / 2.0)
                         ;
-                double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+                double c = 2.0 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
                 double d = 
                             // Mean * c
                             Earth.Radius.Average * c
@@ -222,13 +222,13 @@ public partial class
                 double dlong = (lon2 - lon1) * Radian.FactorInverse;
                 double dlat = (lat2 - lat1) * Radian.FactorInverse;
                 double a = 
-                            Math.Pow(Math.Sin(dlat / 2D), 2D) 
+                            Math.Pow(Math.Sin(dlat / 2.0), 2.0) 
                             + 
                             Math.Cos(lat1 * Radian.FactorInverse) 
                             *
                             Math.Cos(lat2 * Radian.FactorInverse) 
                             * 
-                            Math.Pow(Math.Sin(dlong / 2D), 2D)
+                            Math.Pow(Math.Sin(dlong / 2.0), 2.0)
                             ;
                 double c = 2D * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1D - a));
                 double d = 
