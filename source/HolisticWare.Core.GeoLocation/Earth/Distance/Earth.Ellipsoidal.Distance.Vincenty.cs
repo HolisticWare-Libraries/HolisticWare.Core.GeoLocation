@@ -55,17 +55,19 @@ public partial class
 
                     double dlat = lat2rad - lat1rad;
                     double dlon = lon2rad - lon1rad;
+                    double dlat_half = dlat * 0.5;      // dlat / 2
+                    double dlon_half = dlon * 0.5;
 
                     double a =
-                                Math.Sin(dlat / 2) * Math.Sin(dlat / 2)
+                                Math.Sin(dlat_half) * Math.Sin(dlat_half)
                                 +
-                                Math.Cos(lat1rad) * Math.Cos(lat2rad) * Math.Sin(dlon / 2) * Math.Sin(dlon / 2)
+                                Math.Cos(lat1rad) * Math.Cos(lat2rad) * Math.Sin(dlon_half) * Math.Sin(dlon_half)
                                 ;
-                    double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+                    double c = 2.0 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1.0 - a));
 
                     // Calculate the ellipsoid parameters
                     double b = 
-                                (1 - Earth.Radius.Flattening) 
+                                (1.0 - Earth.Radius.Flattening) 
                                 * 
                                 // Earth.Radius.Average             // semi-minor axis of the Earth's ellipsoid
                                                                     // error in article using 6371 which is average radius
@@ -105,7 +107,7 @@ public partial class
                 {
                     double a = Earth.Radius.Equatorial;
                     double f = Earth.Radius.Flattening;
-                    double b = (1 - f) * a;
+                    double b = (1.0 - f) * a;
                     
                     double phi_1 = lat1;
                     double L_1 = lon1;
@@ -124,11 +126,11 @@ public partial class
 
                     double Lambda = L;                  // # set initial value of lambda to L
 
-                    double cos_sigma = 0;
-                    double cos_sq_alpha = 0;
-                    double sigma = 0;
-                    double sin_sigma = 0;
-                    double cos2_sigma_m = 0;
+                    double cos_sigma = 0.0;
+                    double cos_sq_alpha = 0.0;
+                    double sigma = 0.0;
+                    double sin_sigma = 0.0;
+                    double cos2_sigma_m = 0.0;
                     
                     int iterations = 0;
                     while (iterations < max_iterations)
@@ -150,14 +152,14 @@ public partial class
                         cos_sigma = sin_u1 * sin_u2 + cos_u1 * cos_u2 * cos_lambda;
                         sigma = Math.Atan2(sin_sigma, cos_sigma);
                         double sin_alpha = (cos_u1 * cos_u2 * sin_lambda) / sin_sigma;
-                        cos_sq_alpha = 1 - sin_alpha * sin_alpha;
-                        cos2_sigma_m = cos_sigma - ((2 * sin_u1 * sin_u2) / cos_sq_alpha);
+                        cos_sq_alpha = 1.0 - sin_alpha * sin_alpha;
+                        cos2_sigma_m = cos_sigma - ((2.0 * sin_u1 * sin_u2) / cos_sq_alpha);
                         double C = 
-                                    (Earth.Radius.Flattening / 16) 
+                                    (Earth.Radius.Flattening / 16.0) 
                                     * 
                                     cos_sq_alpha 
                                     * 
-                                    (4 + Earth.Radius.Flattening * (4 - 3 * cos_sq_alpha))
+                                    (4 + Earth.Radius.Flattening * (4.0 - 3.0 * cos_sq_alpha))
                                     ;
                         double Lambda_prev = Lambda;
                         Lambda = 
@@ -173,7 +175,7 @@ public partial class
                                         (
                                             cos2_sigma_m 
                                             + 
-                                            C * cos_sigma * (-1 + 2 * cos2_sigma_m * cos2_sigma_m)
+                                            C * cos_sigma * (-1.0 + 2.0 * cos2_sigma_m * cos2_sigma_m)
                                         )
                                     );
 
@@ -188,26 +190,26 @@ public partial class
                     double b_squared = b * b;
                     double u_sq = cos_sq_alpha * ((a * a - b_squared) / b_squared);
                     double A =
-                                1
+                                1.0
                                 +
-                                (u_sq / 16384)
+                                (u_sq / 16384.0)
                                 * 
                                 (
-                                    4096 
+                                    4096.0 
                                     + 
                                     u_sq 
                                     *
                                     (
-                                        -768 + u_sq * (320 - 175 * u_sq)
+                                        -768.0 + u_sq * (320.0 - 175.0 * u_sq)
                                     )
                                 );
                     double B =
-                                (u_sq / 1024)
+                                (u_sq / 1024.0)
                                 * 
                                 (
-                                    256 
+                                    256.0 
                                     + 
-                                    u_sq * (-128 + u_sq * (74 - 47 * u_sq))
+                                    u_sq * (-128.0 + u_sq * (74.0 - 47.0 * u_sq))
                                 );
                     double delta_sig =
                                         B * sin_sigma 
@@ -218,13 +220,13 @@ public partial class
                                             0.25 * B 
                                             * 
                                             (
-                                                cos_sigma * (-1 + 2 * cos2_sigma_m * cos2_sigma_m) 
+                                                cos_sigma * (-1.0 + 2.0 * cos2_sigma_m * cos2_sigma_m) 
                                                 -
-                                                (1 / 6) * B 
+                                                (1.0 / 6.0) * B 
                                                 * 
-                                                cos2_sigma_m * (-3 + 4 * sin_sigma * sin_sigma) 
+                                                cos2_sigma_m * (-3.0 + 4.0 * sin_sigma * sin_sigma) 
                                                 *
-                                                (-3 + 4 * cos2_sigma_m * cos2_sigma_m)
+                                                (-3.0 + 4.0 * cos2_sigma_m * cos2_sigma_m)
                                             )
                                         );
 
